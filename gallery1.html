@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="style.css">
+
+      <!-- librarie -->
+
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css"/>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+<!-- end of librarie -->
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial;
+}
+
+.header {
+    text-align: center;
+    padding: 32px;
+}
+
+.row {
+    display: -ms-flexbox; /* IE10 */
+    display: flex;
+    -ms-flex-wrap: wrap; /* IE10 */
+    flex-wrap: wrap;
+    padding: 0 4px;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+    -ms-flex: 25%; /* IE10 */
+    flex: 25%;
+    max-width: 25%;
+    padding: 0 4px;
+}
+
+.column img {
+    margin-top: 8px;
+    vertical-align: middle;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+    .column {
+        -ms-flex: 50%;
+        flex: 50%;
+        max-width: 50%;
+    }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+    .column {
+        -ms-flex: 100%;
+        flex: 100%;
+        max-width: 100%;
+    }
+}
+img:hover {
+  animation: shake 0.5s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+a {
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 16px;
+}
+
+a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.previous {
+    background-color: #f1f1f1;
+    color: black;
+}
+
+.next {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.round {
+    border-radius: 50%;
+}
+
+</style>
+</head>
+<body>
+
+<!-- Header -->
+<div class="header">
+  <h1> Gallery </h1>
+  <p> We have these amazing products ;) </p>
+</div>
+
+<!-- Photo Grid -->
+<div class="row">
+  <div class="column">
+    <img src="images/v4.png" style="width:100%">
+    <img src="images/b4.png" style="width:100%">
+    <img src="images/v.png" style="width:100%">
+    <img src="images/fv.png" style="width:100%">
+    <img src="images/f2.png" style="width:100%">
+    <img src="images/g.png" style="width:100%">
+    <img src="images/g3.png" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="images/g5.png" style="width:100%">
+    <img src="images/b2.png" style="width:100%">
+    <img src="images/g1.png" style="width:100%">
+    <img src="images/f3.png" style="width:100%">
+    <img src="images/g.png" style="width:100%">
+    <img src="images/b4.png" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="images/g.png" style="width:100%">
+    <img src="images/v2.png" style="width:100%">
+    <img src="images/b2.png" style="width:100%">
+    <img src="images/b3.png" style="width:100%">
+    <img src="images/b1.png" style="width:100%">
+    <img src="images/g3.png" style="width:100%">
+    <img src="images/fv.png" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="images/b3.png" style="width:100%">
+    <img src="images/g1.png" style="width:100%">
+    <img src="images/f1.png" style="width:100%">
+    <img src="images/g5.png" style="width:100%">
+    <img src="images/f2.png" style="width:100%">
+    <img src="images/b4.png" style="width:100%">
+  </div>
+</div>
+<a href="index.html" class="previous">&laquo; Previous</a>
+<a href="#" class="next">Next &raquo;</a>
+
+</body>
+</html>

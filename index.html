@@ -1,0 +1,106 @@
+<html>
+  <head>
+      <title>Insta Cart</title>
+      <meta charset="utf-8">
+      <link rel="stylesheet" href="style.css">
+
+      <!-- librarie -->
+
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css"/>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+<!-- end of librarie -->
+<style>
+  .footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: black;
+   color: white;
+   text-align: center;
+}
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: red;
+    font-size: 150%;
+    opacity: 1; /* Firefox */
+}
+</style>
+  </head>
+  <!-- <style>
+.mySlides {display:none;}
+</style> -->
+  <body id="body">
+
+          <nav id ="navigation"class="navbar">
+                <!-- <img class="animated wobble" src="images/title1.png" alt="logo image"> -->
+              <div class="container-fluid">
+                <div class="navbar-header">
+                  <!-- Sidebar -->
+<div class="w3-sidebar w3-bar-block w3-border-right" style="display:none" id="mySidebar">
+  <button onclick="w3_close()" class="w3-bar-item w3-large">Close &times;</button>
+  <a href="index.html" class="w3-bar-item w3-button">Home</a>
+  <a href="#" class="w3-bar-item w3-button">Shop by Categories</a>
+  <a href="offer.html" class="w3-bar-item w3-button">offer zone</a>
+  <a href="offer11.html" class="w3-bar-item w3-button">Your Order</a>
+  <a href="#" class="w3-bar-item w3-button">Your Account</a>
+  <a href="#" class="w3-bar-item w3-button">Notifications</a>
+  <a href="#" class="w3-bar-item w3-button">Cook Book</a>
+</div>
+
+<!-- Page Content -->
+<div class="w3-teal">
+  <button class="w3-button w3-teal w3-xlarge" onclick="w3_open()">☰</button>
+  <div class="w3-container">
+
+  </div>
+</div>
+
+
+
+<div class="w3-container">
+
+</div>
+
+<script>
+function w3_open() {
+    document.getElementById("mySidebar").style.display = "block";
+}
+function w3_close() {
+    document.getElementById("mySidebar").style.display = "none";
+}
+</script>
+                </div>
+                <ul class="nav navbar-nav">
+                  <li class="active"><a href="#"><span class="glyphicon glyphicon-home"></span> <b>Home</b></a></li>
+                  <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-list"></span> <b>Categories</b>
+                    <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                      <li><a href="gallery.html">Fruits & Vegetables</a></li>
+                      <li><a href="#">Beverages</a></li>
+                      <li><a href="#">Dairy Products</a></li>
+                      <li><a href="#">Households</a></li>
+                      <li><a href="#">Personal care</a></li>
+                      <li><a href="#"> instant food</a></li>
+                      <li><a href="#">meat,poultary foods</a></li>
+                      <li><a href="#">snacky foods</a></li>
+                      <li><a href="#">sweets  chocolates</a></li>
+                      <li><a href="#">baby products</a></li>
+
+                    </ul>
+                  </li>
+        <li><a href="aboutus.html"><span class="glyphicon glyphicon-info-sign"></span> <b>About Us</b></a></li>
+        <li><a href="contact us.html"><span class="glyphicon glyphicon-earphone"></span> <b>Contact Us</b></a></li>
+               </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="signup.html"><span class="glyphicon glyphicon-user"></span><b> Sign Up</b></a></li>
+        <li><a href="front.html"><span class="glyphicon glyphicon-log-in"></span><b> Login</b></a></li>
+      </ul>
+    </div>
+  </nav>
+  

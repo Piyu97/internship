@@ -1,0 +1,48 @@
+      <div class="container1" id="row">
+        <ul>
+            <h5 style="color:white"> Follow Us</h5>
+            <a href="https://www.facebook.com/" class="fa fa-facebook"></a>
+         <a href="#" class="fa fa-twitter"></a>
+         <a href="#" class="fa fa-google"></a>
+         <a href="#" class="fa fa-youtube"></a>
+         <a href="#" class="fa fa-instagram"></a>
+            <a href="https://secure.opinionlab.com/ccc01/o.asp?id=jBjOhqOJ"> News</a>
+            </ul>
+
+        <ul>
+            <a href="//globalcontacts.cloudapps.cisco.com/contacts/selectsOptions/en_IN"> About us</a>
+            <a href="https://secure.opinionlab.com/ccc01/o.asp?id=jBjOhqOJ"> Contacts</a>
+            <a href="/c/en/us/about/help.html"> FAQ's</a>
+            </ul>
+
+  <footer  id="fw-footer" class="container " tabindex="-1" data-owner="ID">
+      <ul>
+          <a href="//globalcontacts.cloudapps.cisco.com/contacts/selectsOptions/en_IN"> Contacts</a>
+          <a href="https://secure.opinionlab.com/ccc01/o.asp?id=jBjOhqOJ"> Feedback</a>
+          <a href="/c/en/us/about/help.html"> Help</a>
+          <a href="/c/en_in/about/sitemap.html"> Site Map</a>
+          <a href="//www.cisco.com/c/en/us/about/legal/terms-conditions.html">   Terms &amp; Conditions</a>
+
+
+              <a href="//www.cisco.com/c/en_in/about/legal/privacy-full.html"><span>Privacy Statement</span></a>
+
+              <a href="//www.cisco.com/c/en_in/about/legal/privacy-full.html#cookies"> <span>Cookies</span></a>
+          <a href="//www.cisco.com/c/en/us/about/legal/trademarks.html">Trademarks</a>
+      </ul>
+  </footer>
+</div>
+
+
+
+
+#row{
+  text-align: center;
+  margin-right: auto;
+  display: block;
+  background-color: black;
+  color: white;
+  position:static;
+}
+.container1{
+  background-color: black;
+}

@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Insta Cart</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="style.css">
+
+<!-- librarie -->
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css"/>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+
+<style>
+body {
+  margin: 0;
+  font-size: 28px;
+}
+
+.header {
+  background-color: #f1f1f1;
+  padding: 30px;
+  text-align: center;
+}
+
+#navbar {
+  overflow: hidden;
+  background-color: #333;
+}
+
+#navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+#navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+#navbar a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.content {
+  padding: 16px;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .content {
+  padding-top: 60px;
+}
+
+
+.footer {
+ position: fixed;
+ left: 0;
+ bottom: 0;
+ width: 100%;
+ background-color: black;
+ color: white;
+ text-align: center;
+}
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: red;
+  font-size: 150%;
+  opacity: 1; /* Firefox */
+}
+
+</style>
+</head>
+<body>
+
+
+<div id="navbar">
+  <a class="active" href="javascript:void(0)">Home</a>
+  <a href="javascript:void(0)">News</a>
+  <a href="javascript:void(0)">Contact</a>
+</div>
+
+
+<script>
+window.onscroll = function() {myFunction()};
+
+var navbar = document.getElementById("navbar");
+var sticky = navbar.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
+</script>
+<br>
+<br>
+<br>
+<div class="container">
+    <div class="row" id="center">
+      <form class="example" action="action_page.php">
+        <input type="text" placeholder="Go for your Product..." name="search">
+        <button type="submit"><i class="fa fa-search"></i></button>
+      </form>
+    </div>
+  </div>
+  <div class="w3-content w3-section" style="max-width:1350px">
+    <center>
+<img class="mySlides" src="images/new.png" style="width:100%" align="middle">
+<img class="mySlides" src="images/new1.png" style="width:100%" align="middle">
+<img class="mySlides" src="images/new2.png" style="width:100%" align="middle">
+<img class="mySlides" src="images/new4.png" style="width:100%" align="middle">
+</center>
+</div>
+<script>
+var myIndex = 0;
+carousel();
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}
+  x[myIndex-1].style.display = "block";
+  setTimeout(carousel, 2000); // Change image every 2 seconds
+}
+</script>
+<br>
+</div>
+<br>
+
+<center>
+<img src="images/shop.png" alt="beautyproducts" style="width:60%">
+</center>
+<br>
+<div class="w3-container w3-light-blue">
+<br>
+<div class="row">
+<div class="col-md-3 col-xs-12">
+  <a href=""><img src="images/beautyproducts.jpg" alt="beautyproducts" style="width:100%"></a>
+</div>
+<div class="col-md-3 col-xs-12">
+  <a href=""><img src="images/Bevarages.jpg" alt="Bevarages" style="width:100%"></a>
+</div>
+<div class="col-md-3 col-xs-12">
+  <a href=""><img src="images/groceries.jpg" alt="groceries" style="width:100%"></a>
+</div>
+<div class="col-md-3 col-xs-12">
+  <a href=""><img src="images/snacks.jpg" alt="snacks" style="width:100%"></a>
+</div>
+</div>
+<br>
+<div class="row">
+<div class="col-md-3 col-xs-12">
+  <a href=""><img src="images/household.jpg" alt="household" style="width:100%"></a>
+</div>
+<div class="col-md-3 col-xs-12">
+  <a href=""><img src="images/instantfood.jpg" alt="instantfood" style="width:100%"></a>
+</div>
+<div class="col-md-3 col-xs-12">
+  <a href=""><img src="images/personalcare.jpg" alt="personalcare" style="width:100%"></a>
+</div>
+<div class="col-md-3 col-xs-12">
+  <a href=""><img src="images/haircare.jpg" alt="haircare" style="width:100%"></a>
+</div>
+</div>
+<br>
+</div>
+<br>
+<br>
+
+<center>
+  <img style="width:20%"src="images/specialoffers.png">
+</center>
+<div class="container">
+    <div class="col-md-4 col-xs-12">
+      <a href=""><img alt="atta" src="images/atta.jpg" width="55%;">
+  </a>
+<h4 style="font-size:2rem">Ashirvadh aata</h4>
+<h4 style="font-size:1rem">10%-20%off</h4>
+</div>
+<div class="col-md-4 col-xs-12">
+<a href=""><img src="images/BruInstant.jpg" alt="Bru Instant" style="width:55%;"></a>
+<h4 style="font-size:2rem">  Bru Instant</h4>
+<h4 style="font-size:1rem">15%-25%off</h4>
+</div>
+<div class="col-md-4 col-xs-12">
+<a href=""><img src="images/turmeric.jpg" alt="turmeric" style="width:70%;"></a>
+<h4 style="font-size:2rem">Turmeric Powder</h4>
+<h4 style="font-size:1rem">15%-20%off</h4>
+</div>
+</div>
+<div class="container">
+<div class="col-md-4 col-xs-12">
+<a href=""><img src="images/tresemme.jpg" alt="tresemme" style="width:45%;"></a>
+<h4 style="font-size:2rem">Tresemme</h4>
+<h4 style="font-size:1rem">5%-10%off</h4>
+</div>
+<div class="col-md-4 col-xs-12">
+<a href=""><img src="images/rice.jpg" alt="rice" style="width:70%;"></a>
+<h4 style="font-size:2rem">Basmati rice</h4>
+<h4 style="font-size:1rem">20%-25%off</h4>
+</div>
+<div class="col-md-4 col-xs-12">
+<a href=""><img src="images/oil.jpg" alt="oil" style="width:70%;"></a>
+<h4 style="font-size:2rem">Saffola Cooking oil</h4>
+<h4 style="font-size:1rem">10%-25%off</h4>
+</div>
+</div>
+<div>
+<a href=""><img src="images/bestdeals.png" alt="bestdeals" style="width:100%;"></a>
+</div>
+
+
+<center>
+<br>
+<h3 style="font-size: 150%;color:black"><b> SHOP AND SAVE</b></h3>
+</center>
+<br>
+<div class="container">
+<div class="col-md-3 col-xs-12">
+<a href="">
+<img border="0" alt="paytm" src="images/paytm.jpg" width="100%;">
+</a>
+</div>
+<div class="col-md-3 col-xs-12">
+<a href="">
+<img border="0" alt="hdfc" src="images/hdfc.jpg" width="100%;">
+</a>
+</div>
+<div class="col-md-3 col-xs-12">
+<a href="">
+<img border="0" alt="mobikwik" src="images/mobikwik.jpg" width="100%;">
+</a>
+</div>
+<div class="col-md-3 col-xs-12">
+<a href="">
+<img border="0" alt="icici" src="images/icici.jpg" width="100%;">
+</a>
+</div>
+</div>
+<br>
+<center>
+<br>
+<img src="images/today deals.jpg" alt="todaysdeal" style="width:60%;">
+</center>
+<div class="w3-container w3-khaki">
+<div class="col-md-3 col-xs-12">
+<a href=""><img alt="atta" src="images/z3.png" width="100%;">
+</a>
+<div class=text-block>
+<h4 style="font-size:1.5rem">20%off</h4>
+</div>
+</div>
+<div class="col-md-3 col-xs-12">
+<a href=""><img src="images/z2.png" alt="Bru Instant" style="width:100%;"></a>
+<div class=text-block>
+<h4 style="font-size:1.5rem">15%off</h4>
+</div>
+</div>
+<div class="col-md-3 col-xs-12">
+<a href=""><img src="images/z1.png" alt="household" style="width:100%;"></a>
+<div class=text-block>
+<h4 style="font-size:1.5rem">20%off</h4>
+</div>
+</div>
+<div class="col-md-3 col-xs-12">
+<a href=""><img src="images/z6.png" alt="oil" style="width:100%;"></a>
+<div class=text-block>
+<h4 style="font-size:1.5rem">25%off</h4>
+</div>
+</div>
+</div>
+<div class="w3-container w3-khaki">
+<div class="col-md-3 col-xs-12">
+<a href=""><img src="images/z7.png" alt="tresemme" style="width:100%;"></a>
+<div class=text-block>
+<h4 style="font-size:1.5rem">10%off</h4>
+</div>
+</div>
+<div class="col-md-3 col-xs-12">
+<a href=""><img src="images/z8.png" alt="rice" style="width:100%;"></a>
+<div class=text-block>
+<h4 style="font-size:1.5rem">20%off</h4>
+</div>
+</div>
+<div class="col-md-3 col-xs-12">
+<a href=""><img src="images/z9.png" alt="oil" style="width:100%;"></a>
+<div class=text-block>
+<h4 style="font-size:1.5rem">10%off</h4>
+</div>
+</div>
+<div class="col-md-3 col-xs-12">
+<a href=""><img src="images/z5.png" alt="rice" style="width:100%;"></a>
+<div class=text-block>
+<h4>25%off</h4>
+</div>
+</div>
+</div>
+
+
+<center>
+<br>
+<h3 style="font-size: 150%;color:black"><b> POPULAR BRANDS</b></h3>
+</center>
+<br>
+<div class= "container">
+<div class="col-md-3 col-xs-12">
+<img src="images/bru.jpg" alt="bru" style="width:60%;">
+</div>
+<div class="col-md-3 col-xs-12">
+  <img src="images/sunfeast.jpg" alt="sunfeast" style="width:60%;">
+</div>
+<div class="col-md-3 col-xs-12">
+  <img src="images/mtr.jpg" alt="mtr" style="width:60%;">
+</div>
+<div class="col-md-3 col-xs-12">
+  <img src="images/nes.jpg" alt="nescafe" style="width:60%;">
+</div>
+</div> <br>
+<div class="container">
+<div class="col-md-3 col-xs-12">
+  <img src="images/lakme.jpg" alt="lakme" style="width:60%;">
+</div>
+<div class="col-md-3 col-xs-12">
+  <img src="images/tropicana.jpg" alt="tropicana" style="width:60%;">
+</div>
+<div class="col-md-3 col-xs-12">
+  <img src="images/cocacola.jpg" alt="cocacola" style="width:60%;">
+</div>
+<div class="col-md-3 col-xs-12">
+  <img src="images/lays.jpg" alt="lays" style="width:60%;">
+</div>
+</div>
+
+<style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 20px;
+    }
+
+    #myBtn {
+      display: none;
+      position: fixed;
+      bottom: 20px;
+      right: 30px;
+      z-index: 99;
+      font-size: 18px;
+      border: none;
+      outline: none;
+      background-color: red;
+      color: white;
+      cursor: pointer;
+      padding: 15px;
+      border-radius: 4px;
+    }
+
+    #myBtn:hover {
+      background-color: #555;
+    }
+    </style>
+    </head>
+    <body>
+
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+
+
+    <script>
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            document.getElementById("myBtn").style.display = "block";
+        } else {
+            document.getElementById("myBtn").style.display = "none";
+        }
+    }
+
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    }
+    </script>
+    <div class="container1" id="row">
+      <ul>
+          <h5 style="color:white"> Follow Us</h5>
+          <a href="https://www.facebook.com/" class="fa fa-facebook"></a>
+       <a href="#" class="fa fa-twitter"></a>
+       <a href="#" class="fa fa-google"></a>
+       <a href="#" class="fa fa-youtube"></a>
+       <a href="#" class="fa fa-instagram"></a>
+          <a href="https://secure.opinionlab.com/ccc01/o.asp?id=jBjOhqOJ"> News</a>
+          </ul>
+
+      <ul>
+          <a href="//globalcontacts.cloudapps.cisco.com/contacts/selectsOptions/en_IN"> About us</a>
+          <a href="https://secure.opinionlab.com/ccc01/o.asp?id=jBjOhqOJ"> Contacts</a>
+          <a href="/c/en/us/about/help.html"> FAQ's</a>
+          </ul>
+
+<footer  id="fw-footer" class="container " tabindex="-1" data-owner="ID">
+    <ul>
+        <a href="//globalcontacts.cloudapps.cisco.com/contacts/selectsOptions/en_IN"> Contacts</a>
+        <a href="https://secure.opinionlab.com/ccc01/o.asp?id=jBjOhqOJ"> Feedback</a>
+        <a href="/c/en/us/about/help.html"> Help</a>
+        <a href="/c/en_in/about/sitemap.html"> Site Map</a>
+        <a href="//www.cisco.com/c/en/us/about/legal/terms-conditions.html">   Terms &amp; Conditions</a>
+
+
+            <a href="//www.cisco.com/c/en_in/about/legal/privacy-full.html"><span>Privacy Statement</span></a>
+
+            <a href="//www.cisco.com/c/en_in/about/legal/privacy-full.html#cookies"> <span>Cookies</span></a>
+        <a href="//www.cisco.com/c/en/us/about/legal/trademarks.html">Trademarks</a>
+    </ul>
+</footer>
+</div>
+
+</body>
+</html>
