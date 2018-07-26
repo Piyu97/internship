@@ -1,0 +1,47 @@
+
+Result Size: 753 x 601
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<script>
+
+$(document).ready(function(){
+
+    $("p").click(function(){
+
+        $(this).hide();
+
+    });
+
+});
+
+</script>
+
+</head>
+
+<body>
+
+?
+
+?
+
+<p>insta cart
+
+<br>
+
+indias largest online super market</p>
+
+?
+
+</body>
+
+</html>
+
+?
+

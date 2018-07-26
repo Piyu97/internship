@@ -1,0 +1,117 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="style.css">
+
+  <!-- librarie -->
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css"/>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+<!-- end of librarie -->
+<style>
+a.c{
+  color:red;
+  margin-left: 10px;
+  font-size: 20px;
+}
+hr {
+    display: block;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: inset;
+    border-width: 1px;
+}
+</style>
+</head>
+<body>
+<div class="container" data-ng-app="" data-ng-init="Price=34">
+    <h1>FRESH</h1>
+    <h2>Banana &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp Express Delivery : 60 minutes</h2>
+    <b style="font-size:20px">Quantity</b>
+  <input type="number" id="myNumber" min="1" max="10" input type="number" ng-model="Quantity" placeholder="1 kg" name="Quantity">
+<a href="#" class="btn btn-info" role="button" style="margin-left:20px"><b> ADD TO CART</b></a>
+    <h4><b>MRP :</b> <strike><i style="font-size:24px" class="fa">&#xf156;</i>40</strike> &nbsp<b style="font-size:25px"><i style="font-size:24px" class="fa">&#xf156;</i>34 </b> <a class="c"> 15% OFF</a></h4>
+<p><strong>Total in Rupees:</strong>{{Quantity * Price}}</p>
+<div class="w3-content w3-display-container">
+  <img class="mySlides" src="images/new.png" style="width:100%">
+  <img class="mySlides" src="images/new1.png" style="width:100%">
+  <img class="mySlides" src="images/new2.png" style="width:100%">
+  <img class="mySlides" src="images/new4.png" style="width:100%">
+
+  <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+  <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+</div>
+
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+  x[slideIndex-1].style.display = "block";
+}
+</script>
+<h6 style="text-align:center"><i class="fa fa-circle"  style="color:green; border:solid; font-size:15px"></i><b>Vegetarian</b></h6>
+<hr>
+<h2> <i class="fa fa-balance-scale"></i>  InstaCart Variable Weight Policy </h2>
+<h4><p> <i>Please note that fresh fruit and vegetables items will be billed based on exact
+  weight during order processing.<br>(In case the actual weight exceeds the requested
+  weight by more than 5%,you will be charged only for 5% excess weight.)</i></p></h4>
+<hr>
+<div class="w3-container">
+<div class="w3-panel w3-leftbar w3-light-grey">
+<h2><u> ABOUT</u> <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal" style="margin-left:800px"><b>Benefits</b></button> </h2>
+  <p class="w3-xlarge w3-serif">Banana<br>
+Banana is the common name for a type of fruit and also the name for the  herbaceous plants that grow it.<br>
+Most banana plants are grown for their fruits and  are available year-round.<br>
+They are bigger in size and bright green.<br> They are cut and left in large clusters just as they grew.<br>
+</p>
+  </div>
+</div>
+  </div>
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title"><b>Interesting Fact</b></h4>
+        </div>
+        <div class="modal-body">
+          <p>Benefits:
+Bananas are great super food which provides us with energy, make us feel full and provide our body with essential<br>
+ nutrients and high amount of fiber.<br>  They serve an important role in many traditional diets. <br>
+ They may help prevent asthma, cancer, high blood pressure diabeties cardiovascular disease, and digestive problems.<br>
+</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+
+</body>
+</html>

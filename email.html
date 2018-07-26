@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+
+
+
+    <title></title>
+    <style>
+
+
+
+    var nodemailer = require('nodemailer');
+
+var transporter = nodemailer.createTransport({
+  service: 'gmail',
+  auth: {
+    user: 'juhidadhich112@gmail.com',
+    pass: 'anushkad'
+  }
+});
+
+var mailOptions = {
+  from: 'juhidadhich112@gmail.com',
+  to: 'thanushreed17@gmail.com',
+  subject: 'Sending Email using Node.js',
+  text: 'That was easy!'
+};
+
+transporter.sendMail(mailOptions, function(error, info){
+  if (error) {
+    console.log(error);
+  } else {
+    console.log('Email sent: ' + info.response);
+  }
+});
+
+
+    </style>
+  </head>
+  
+</html>
