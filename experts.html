@@ -1,0 +1,42 @@
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+</head>
+<body>
+<input type="text" name="" value="" ng-model="search">
+  <select class="" name=""  ng-model="sort">
+    <option value="price">Sort by rate</option>
+    <option value="exp">Sort by experience</option>
+  </select>
+  <div class="row " id="center">
+
+
+    <div class="col-md-offset-2 col-md-6 col-xs-12 ">
+
+
+      <table class="table">
+        <tr>
+          <td>
+              Name
+          </td>
+          <td>
+              Experience
+          </td>
+          <td>
+              Price
+          </td>
+        </tr>
+        <tr ng-repeat="d in datas | filter:search | orderBy:sort">
+          <td>{{d.name | uppercase}}</td>
+          <td>{{d.exp}}</td>
+          <td>{{d.price }}</td>
+          <td class="btn btn-success">  <span class="glyphicon glyphicon-earphone"> </span>  </td>
+        </tr>
+
+
+
+</table>
+</div>
+</body>

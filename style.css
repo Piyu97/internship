@@ -104,7 +104,7 @@ form.example::after {
   position: absolute;
   top: 20px;
   right: 20px;
-  background-color:grey;
+  background-color:brown;
   color: white;
   padding-left: 20px;
   padding-right: 20px;
@@ -149,7 +149,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
   text-align: center;
   margin-right: auto;
   display: block;
-  background-color:navy;
+  background-color:black;
   color: white;
   position:static;
 }

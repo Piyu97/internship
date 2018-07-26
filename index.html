@@ -1,20 +1,76 @@
-<html>
+﻿<html>
   <head>
       <title>Insta Cart</title>
       <meta charset="utf-8">
-      <link rel="stylesheet" href="style.css">
+       <meta charset="UTF-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <meta http-equiv="X-UA-Compatible" content="ie=edge">
+       <link rel="stylesheet" href="style.css">
 
-      <!-- librarie -->
+       <!-- librarie -->
+       <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
 
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css"/>
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+       <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
 
+         <script src="js/app.js"></script>
+       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css"/>
+ <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <!-- end of librarie -->
+
+<script type="text/javascript">
+  $(document).ready(function(){
+    console.log("side navbar ");
+    $("#mySidebar").mouseleave(function(){
+      console.log("side navbar ");
+        $("#mySidebar").hide();
+
+    })
+
+  });
+</script>
+
 <style>
+/*fixed nav*/
+
+.affix
+{
+
+     top: 0;
+
+     width: 100%;
+
+     z-index: 9999;
+
+ }
+
+/* dropdown */
+     .fa-caret-down {
+         float: right;
+         padding-right: 5px;
+     }
+     .dropdown-container {
+    display: none;
+    background-color: black;
+    padding-left: 8px;
+    color: white;
+}
+
+.dropdown-btn {
+    text-decoration: none;
+    font-size: 20px;
+    color: grey;
+    display: block;
+    border: none;
+    background: none;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    outline: none;
+}
   .footer {
    position: fixed;
    left: 0;
@@ -29,6 +85,24 @@
     font-size: 150%;
     opacity: 1; /* Firefox */
 }
+div.scrollmenu {
+    background-color:khaki;
+    overflow: auto;
+    white-space: nowrap;
+}
+
+div.scrollmenu a {
+    display:inline-grid;
+    color: white;
+    text-align: center;
+    padding: 50px;
+    text-decoration: none;
+}
+
+div.scrollmenu a:hover {
+    background-color:snow white;
+}
+
 </style>
   </head>
   <!-- <style>
@@ -36,82 +110,98 @@
 </style> -->
   <body id="body">
 
-          <nav id ="navigation"class="navbar">
-                <!-- <img class="animated wobble" src="images/title1.png" alt="logo image"> -->
-              <div class="container-fluid">
-                <div class="navbar-header">
-                  <!-- Sidebar -->
-<div class="w3-sidebar w3-bar-block w3-border-right" style="display:none" id="mySidebar">
-  <button onclick="w3_close()" class="w3-bar-item w3-large">Close &times;</button>
-  <a href="index.html" class="w3-bar-item w3-button">Home</a>
-  <a href="#" class="w3-bar-item w3-button">Shop by Categories</a>
-  <a href="offer.html" class="w3-bar-item w3-button">offer zone</a>
-  <a href="offer11.html" class="w3-bar-item w3-button">Your Order</a>
+    <div class="w3-sidebar w3-bar-block w3-border-right" style="display:none" id="mySidebar">
+  <button onclick="w3_close()" class="w3-bar-item w3-large">Close   &times;</button>
+  <a href="#"  class="w3-bar-item w3-button">Home</a>
+  <a href="#" <button  class="dropdown-btn" class="w3-bar-item w3-button w3-hover-grey"> Shop by category
+<i class="fa fa-caret-down"></i>
+</button></a>
+<div class="dropdown-container">
+<a href="#" class="w3-bar-item w3-button w3-hover-grey">Fruits and Vegetables</a>
+<a href="#" class="w3-bar-item w3-button w3-hover-grey">Beverages</a>
+<a href="#" class="w3-bar-item w3-button w3-hover-grey" >Dairy</a>
+<a href="#" class="w3-bar-item w3-button w3-hover-grey">Household Products</a>
+<a href="#" class="w3-bar-item w3-button w3-hover-grey">Personal Care</a>
+<a href="#" class="w3-bar-item w3-button w3-hover-grey">Instant Food</a>
+<a href="#" class="w3-bar-item w3-button w3-hover-grey">Snacks</a>
+<a href="#" class="w3-bar-item w3-button w3-hover-grey">Sweets and Chocolates</a>
+<a href="#" class="w3-bar-item w3-button w3-hover-grey">Baby Care Products</a>
+
+</div>
+<
+  <a href="#" class="w3-bar-item w3-button">Your order</a>
   <a href="#" class="w3-bar-item w3-button">Your Account</a>
+  <a href="#" class="w3-bar-item w3-button">Offers Zone </a>
   <a href="#" class="w3-bar-item w3-button">Notifications</a>
   <a href="#" class="w3-bar-item w3-button">Cook Book</a>
+  <a href="#" class="w3-bar-item w3-button">Help</a>
+  <a href="#" class="w3-bar-item w3-button">Sign Out</a>
 </div>
-
-<!-- Page Content -->
-<div class="w3-teal">
-  <button class="w3-button w3-teal w3-xlarge" onclick="w3_open()">☰</button>
-  <div class="w3-container">
-
-  </div>
+<div id="sidenavbar">
+<nav class="navbar navbar-inverse" data-spy="affix" data-offset-top="197">
+  <ul class="nav navbar-nav">
+    <li>  <button class="w3-button w3-black w3-xlarge" onclick="w3_open()">☰</button></li>
+   <li><a style="color:white;font-size:25px" href="#home">Home &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp</a></li>
+     </ul>
+<p style="color:white; font-size:30px" class="navbar-text">InstaCart</p>
+  <ul class="nav navbar-nav navbar-right">
+    <li><a style="color:white" href="front.html"><i class="fa fa-user"></i>Sign Up</a></li>
+    <li><a style="color:white" href="cart.html"><i class="fa fa-shopping-cart"></i>Cart</a></li>
+    <form class="navbar-form navbar-left" action="/action_page.php">
+    <div class="form-group">
+      <input type="text" class="form-control" placeholder="Search" name="search">
+    </div>
+    <button type="submit" class="btn btn-default">Submit</button>
+  </form>
+  </ul>
+</nav>
 </div>
-
-
-
-<div class="w3-container">
-
-</div>
-
 <script>
-function w3_open() {
-    document.getElementById("mySidebar").style.display = "block";
+
+      /* scroll top*/
+      // When the user scrolls down 20px from the top of the document, show the button
+      window.onscroll = function() {scrollFunction()};
+
+      function scrollFunction() {
+          if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+              document.getElementById("myBtn").style.display = "block";
+          } else {
+              document.getElementById("myBtn").style.display = "none";
+          }
+      }
+
+      // When the user clicks on the button, scroll to the top of the document
+      function topFunction() {
+          document.body.scrollTop = 0;
+          document.documentElement.scrollTop = 0;
+      }
+/* sidebar*/
+  function w3_open() {
+document.getElementById("mySidebar").style.display = "block";
 }
 function w3_close() {
-    document.getElementById("mySidebar").style.display = "none";
+document.getElementById("mySidebar").style.display = "none";
 }
-</script>
-                </div>
-                <ul class="nav navbar-nav">
-                  <li class="active"><a href="#"><span class="glyphicon glyphicon-home"></span> <b>Home</b></a></li>
-                  <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-list"></span> <b>Categories</b>
-                    <span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                      <li><a href="fruits and vegetables.html">Fruits & Vegetables</a></li>
-                      <li><a href="#">Beverages</a></li>
-                      <li><a href="#">Dairy Products</a></li>
-                      <li><a href="#">Households</a></li>
-                      <li><a href="#">Personal care</a></li>
-                      <li><a href="#"> instant food</a></li>
-                      <li><a href="#">meat,poultary foods</a></li>
-                      <li><a href="#">snacky foods</a></li>
-                      <li><a href="#">sweets  chocolates</a></li>
-                      <li><a href="#">baby products</a></li>
+/* dropdown */
+var dropdown = document.getElementsByClassName("dropdown-btn");
+var i;
 
-                    </ul>
-                  </li>
-        <li><a href="aboutus.html"><span class="glyphicon glyphicon-info-sign"></span> <b>About Us</b></a></li>
-        <li><a href="contact us.html"><span class="glyphicon glyphicon-earphone"></span> <b>Contact Us</b></a></li>
-               </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="signup.html"><span class="glyphicon glyphicon-user"></span><b> Sign Up</b></a></li>
-        <li><a href="front.html"><span class="glyphicon glyphicon-log-in"></span><b> Login</b></a></li>
-      </ul>
-    </div>
-  </nav>
-  <div class="container">
-      <div class="row" id="center">
-        <form class="example" action="action_page.php">
-          <input type="text" placeholder="Go for your Product..." name="search">
-          <button type="submit"><i class="fa fa-search"></i></button>
-        </form>
-      </div>
-    </div>
-    <div class="w3-content w3-section" style="max-width:1350px">
+for (i = 0; i < dropdown.length; i++) {
+dropdown[i].addEventListener("click", function() {
+this.classList.toggle("active");
+var dropdownContent = this.nextElementSibling;
+if (dropdownContent.style.display === "block") {
+  dropdownContent.style.display = "none";
+} else {
+  dropdownContent.style.display = "block";
+}
+});
+}
+
+  </script>
+<!-- Page Content -->
+
+    <div class="w3-content w3-section" style="max-width:1550px">
       <center>
   <img class="mySlides" src="images/new.png" style="width:100%" align="middle">
   <img class="mySlides" src="images/new1.png" style="width:100%" align="middle">
@@ -146,31 +236,31 @@ function carousel() {
   <br>
 <div class="row">
   <div class="col-md-3 col-xs-12">
-    <a href=""><img src="images/beautyproducts.jpg" alt="beautyproducts" style="width:100%"></a>
+    <a href="skincare makeup.html"><img src="images/beautyproducts.jpg" alt="beautyproducts" style="width:100%"></a>
   </div>
   <div class="col-md-3 col-xs-12">
-    <a href=""><img src="images/Bevarages.jpg" alt="Bevarages" style="width:100%"></a>
+    <a href="bevarages.html"><img src="images/Bevarages.jpg" alt="Bevarages" style="width:100%"></a>
   </div>
   <div class="col-md-3 col-xs-12">
-    <a href=""><img src="images/groceries.jpg" alt="groceries" style="width:100%"></a>
+    <a href="cooking essentials.html"><img src="images/groceries.jpg" alt="groceries" style="width:100%"></a>
   </div>
   <div class="col-md-3 col-xs-12">
-    <a href=""><img src="images/snacks.jpg" alt="snacks" style="width:100%"></a>
+    <a href="snackfood.html"><img src="images/snacks.jpg" alt="snacks" style="width:100%"></a>
   </div>
 </div>
 <br>
 <div class="row">
   <div class="col-md-3 col-xs-12">
-    <a href=""><img src="images/household.jpg" alt="household" style="width:100%"></a>
+    <a href="householdneeds.html"><img src="images/household.jpg" alt="household" style="width:100%"></a>
   </div>
   <div class="col-md-3 col-xs-12">
-    <a href=""><img src="images/instantfood.jpg" alt="instantfood" style="width:100%"></a>
+    <a href="instantfoods.html"><img src="images/instantfood.jpg" alt="instantfood" style="width:100%"></a>
   </div>
   <div class="col-md-3 col-xs-12">
-    <a href=""><img src="images/personalcare.jpg" alt="personalcare" style="width:100%"></a>
+    <a href="personalcare.html"><img src="images/personalcare.jpg" alt="personalcare" style="width:100%"></a>
   </div>
   <div class="col-md-3 col-xs-12">
-    <a href=""><img src="images/haircare.jpg" alt="haircare" style="width:100%"></a>
+    <a href="haircarebodybath.html"><img src="images/haircare.jpg" alt="haircare" style="width:100%"></a>
   </div>
 </div>
 <br>
@@ -183,43 +273,42 @@ function carousel() {
   </center>
   <div class="container">
       <div class="col-md-4 col-xs-12">
-        <a href=""><img alt="atta" src="images/atta.jpg" width="55%;">
+        <a href="cooking essentials.html"><img alt="atta" src="images/atta.jpg" width="55%;">
     </a>
   <h4 style="font-size:2rem">Ashirvadh aata</h4>
-  <h4 style="font-size:1rem">10%-20%off</h4>
+  <h4><b>MRP :</b> <strike>Rs 300</strike> &nbsp<b style="font-size:25px"> Rs 240.00 </b> <a class="c"> 20% OFF</a></h4>
 </div>
 <div class="col-md-4 col-xs-12">
-<a href=""><img src="images/BruInstant.jpg" alt="Bru Instant" style="width:55%;"></a>
+<a href="bevarages.html"><img src="images/BruInstant.jpg" alt="Bru Instant" style="width:55%;"></a>
 <h4 style="font-size:2rem">  Bru Instant</h4>
-<h4 style="font-size:1rem">15%-25%off</h4>
+<h4><b>MRP :</b> <strike>Rs 50</strike> &nbsp<b style="font-size:25px"> Rs 45.00 </b> <a class="c"> 10% OFF</a></h4>
 </div>
 <div class="col-md-4 col-xs-12">
-<a href=""><img src="images/turmeric.jpg" alt="turmeric" style="width:70%;"></a>
+<a href="cooking essentials.html"><img src="images/turmeric.jpg" alt="turmeric" style="width:70%;"></a>
 <h4 style="font-size:2rem">Turmeric Powder</h4>
-<h4 style="font-size:1rem">15%-20%off</h4>
+<h4><b>MRP :</b> <strike>Rs 70</strike> &nbsp<b style="font-size:25px"> Rs 66.50 </b> <a class="c"> 5% OFF</a></h4>
 </div>
 </div>
 <div class="container">
 <div class="col-md-4 col-xs-12">
-<a href=""><img src="images/tresemme.jpg" alt="tresemme" style="width:45%;"></a>
+<a href="haircarebodybath.html"><img src="images/tresemme.jpg" alt="tresemme" style="width:43%;"></a>
 <h4 style="font-size:2rem">Tresemme</h4>
-<h4 style="font-size:1rem">5%-10%off</h4>
+<h4><b>MRP :</b> <strike>Rs 200</strike> &nbsp<b style="font-size:25px"> Rs 170.00 </b> <a class="c"> 15% OFF</a></h4>
 </div>
 <div class="col-md-4 col-xs-12">
-<a href=""><img src="images/rice.jpg" alt="rice" style="width:70%;"></a>
+<a href="cooking essentials.html"><img src="images/rice.jpg" alt="rice" style="width:70%;"></a>
 <h4 style="font-size:2rem">Basmati rice</h4>
-<h4 style="font-size:1rem">20%-25%off</h4>
+<h4><b>MRP :</b> <strike>Rs 150</strike> &nbsp<b style="font-size:25px"> Rs 135.00 </b> <a class="c"> 10% OFF</a></h4>
 </div>
 <div class="col-md-4 col-xs-12">
-<a href=""><img src="images/oil.jpg" alt="oil" style="width:70%;"></a>
+<a href="cooking essentials.html"><img src="images/oil.jpg" alt="oil" style="width:70%;"></a>
 <h4 style="font-size:2rem">Saffola Cooking oil</h4>
-<h4 style="font-size:1rem">10%-25%off</h4>
+<h4><b>MRP :</b> <strike>Rs 90</strike> &nbsp<b style="font-size:25px"> Rs 81.00 </b> <a class="c"> 10% OFF</a></h4>
 </div>
 </div>
 <div>
 <a href=""><img src="images/bestdeals.png" alt="bestdeals" style="width:100%;"></a>
 </div>
-
 
 <center>
   <br>
@@ -228,7 +317,7 @@ function carousel() {
 <br>
 <div class="container">
 <div class="col-md-3 col-xs-12">
-<a href="">
+<a href="paytm.html">
 <img border="0" alt="paytm" src="images/paytm.jpg" width="100%;">
 </a>
 </div>
@@ -249,32 +338,63 @@ function carousel() {
 </div>
 </div>
 <br>
+
+  <center>
+  <h3 style="font-size: 150%;color:black"><b> CRAZY ON BEAUTY</b></h3>
+</center>
+<div class="w3-container w3-pale-red">
+<div class="col-md-4 col-xs-12">
+<a href=""><img src="images/top1.jpeg" alt="Bru Instant" style="width:70%;"></a>
+</div>
+<div class="col-md-4 col-xs-12">
+<a href=""><img src="images/top2.jpeg" alt="household" style="width:70%;"></a>
+</div>
+<div class="col-md-4 col-xs-12">
+<a href=""><img src="images/top3.jpeg" alt="turmeric" style="width:70%;"></a>
+</div>
+</div>
+<br>
+<div class="w3-container w3-pale-red">
+<div class="col-md-4 col-xs-12">
+<a href=""><img src="images/top4.jpeg" alt="tresemme" style="width:70%;"></a>
+</div>
+<div class="col-md-4 col-xs-12">
+<a href=""><img src="images/top5.jpeg" alt="rice" style="width:70%;"></a>
+  </div>
+<div class="col-md-4 col-xs-12">
+<a href=""><img src="images/top6.jpeg" alt="oil" style="width:70%;"></a>
+</div>
+</div>
+<center>
+  <br>
+
+<br>
 <center>
   <br>
   <img src="images/today deals.jpg" alt="todaysdeal" style="width:60%;">
 </center>
 <div class="w3-container w3-khaki">
 <div class="col-md-3 col-xs-12">
-  <a href=""><img alt="atta" src="images/z3.png" width="100%;">
+  <a href="haircarebodybath.html"><img alt="haircarebodybath" src="images/z3.png" width="100%;">
 </a>
 <div class=text-block>
 <h4 style="font-size:1.5rem">20%off</h4>
 </div>
 </div>
 <div class="col-md-3 col-xs-12">
-<a href=""><img src="images/z2.png" alt="Bru Instant" style="width:100%;"></a>
+<a href="bevarages.html"><img src="images/z2.png" alt="snackfood" style="width:100%;"></a>
 <div class=text-block>
 <h4 style="font-size:1.5rem">15%off</h4>
 </div>
 </div>
 <div class="col-md-3 col-xs-12">
-<a href=""><img src="images/z1.png" alt="household" style="width:100%;"></a>
+<a href="householdneeds.html"><img src="images/z1.png" alt="household" style="width:100%;"></a>
 <div class=text-block>
 <h4 style="font-size:1.5rem">20%off</h4>
 </div>
 </div>
 <div class="col-md-3 col-xs-12">
-<a href=""><img src="images/z6.png" alt="oil" style="width:100%;"></a>
+<a href="instantfood"><img src="images/z6.png" alt="instantfood" style="width:100%;"></a>
 <div class=text-block>
 <h4 style="font-size:1.5rem">25%off</h4>
 </div>
@@ -282,30 +402,32 @@ function carousel() {
 </div>
 <div class="w3-container w3-khaki">
 <div class="col-md-3 col-xs-12">
-<a href=""><img src="images/z7.png" alt="tresemme" style="width:100%;"></a>
+<a href=""><img src="images/z7.png" alt="petfood" style="width:100%;"></a>
 <div class=text-block>
   <h4 style="font-size:1.5rem">10%off</h4>
 </div>
 </div>
 <div class="col-md-3 col-xs-12">
-<a href=""><img src="images/z8.png" alt="rice" style="width:100%;"></a>
+<a href="meat.html"><img src="images/z8.png" alt="meat" style="width:100%;"></a>
   <div class=text-block>
 <h4 style="font-size:1.5rem">20%off</h4>
 </div>
 </div>
 <div class="col-md-3 col-xs-12">
-<a href=""><img src="images/z9.png" alt="oil" style="width:100%;"></a>
+<a href="fruits and vegetables.html"><img src="images/z9.png" alt="Fruits" style="width:100%;"></a>
 <div class=text-block>
 <h4 style="font-size:1.5rem">10%off</h4>
 </div>
 </div>
 <div class="col-md-3 col-xs-12">
-<a href=""><img src="images/z5.png" alt="rice" style="width:100%;"></a>
+<a href="snackfood.html"><img src="images/z5.png" alt="snackfood" style="width:100%;"></a>
 <div class=text-block>
 <h4>25%off</h4>
 </div>
 </div>
 </div>
+
+<hr style="color: blue">
 
 
 <center>
@@ -341,6 +463,52 @@ function carousel() {
     <img src="images/lays.jpg" alt="lays" style="width:60%;">
   </div>
 </div>
+<br>
+<div class="container">
+  <center>
+<h1><i><b>BEST SELLERS</b></i></h1>
+  </center>
+  <br>
+        <div class="scrollmenu">
+          <a href="harpic.html"><img src="images/bestoffers1.jpg" alt="bestoffers1" style="width:150%;"></a>
+          <a href="cooking essentials.html"><img src="images/bestoffers2.jpg" alt="bestoffers2" style="width:150%;"></a>
+          <a href="dettol.html"><img src="images/bestoffers3.jpg" alt="bestoffers3" style="width:150%;"></a>
+          <a href="haircarebodybath.html"><img src="images/bestoffers4.jpg" alt="bestoffers4" style="width:150%;"></a>
+          <a href="beautyproducts.html"><img src="images/bestoffers5.jpg" alt="bestoffers5" style="width:150%;"></a>
+          <a href="cooking essentials.html"><img src="images/bestoffers6.jpg" alt="bestoffers6" style="width:150%;"></a>
+          <a href="haircarebodybath.html"><img src="images/bestoffers7.jpg" alt="bestoffers7" style="width:150%;"></a>
+          <a href="householdneeds.html"><img src="images/bestoffers8.jpg" alt="bestoffers8" style="width:150%;"></a>
+          <a href="instantfood.html"><img src="images/bestoffers9.jpg" alt="bestoffers9" style="width:150%;"></a>
+          <a href="haircarebodybath.html"><img src="images/bestoffers10.jpg" alt="bestoffers10" style="width:150%;"></a>
+          <a href="householdneeds.html"><img src="images/bestoffers11.jpg" alt="bestoffers11" style="width:150%;"></a>
+          <a href="cooking essentials.html"><img src="images/bestoffers12.jpg" alt="bestoffers12" style="width:150%;"></a>
+
+                </div>
+              </div>
+              <br>
+              <center>
+            <h1><i><b>FOOD CUPBOARD</b></i></h1>
+          </center>
+
+              <div class="container">
+                <a href=""><img src="images/mango.jpg" alt="mango" style="width:100%"></a>
+                <br>
+                <br>
+                <div class="row">
+                <div class="col-md-3 col-xs-12">
+                  <a href="butter.html"><img src="images/butter.jpg" alt="butter" style="width:100%"></a>
+                </div>
+                <div class="col-md-3 col-xs-12">
+                  <a href="cheese.html"><img src="images/curd.jpg" alt="curd" style="width:100%"></a>
+                </div>
+                <div class="col-md-3 col-xs-12">
+                  <a href="milk.html"><img src="images/milk.jpg" alt="milk" style="width:100%"></a>
+                </div>
+                <div class="col-md-3 col-xs-12">
+                  <a href="panner.html"><img src="images/paneer.jpg" alt="paneer" style="width:100%"></a>
+                </div>
+              </div>
+            </div>
 
   <style>
       body {
@@ -371,8 +539,7 @@ function carousel() {
       </head>
       <body>
 
-      <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa fa-angle-up" style="font-size:48px;color:white"></i>
-</button>
+      <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
 
 
 
@@ -402,31 +569,23 @@ function carousel() {
          <a href="#" class="fa fa-google"></a>
          <a href="#" class="fa fa-youtube"></a>
          <a href="#" class="fa fa-instagram"></a>
-            <a href="https://secure.opinionlab.com/ccc01/o.asp?id=jBjOhqOJ"> News</a>
+            <a href="news.html"> News</a>
             </ul>
 
         <ul>
-            <a href="//globalcontacts.cloudapps.cisco.com/contacts/selectsOptions/en_IN"> About us</a>
-            <a href="https://secure.opinionlab.com/ccc01/o.asp?id=jBjOhqOJ"> Contacts</a>
-            <a href="/c/en/us/about/help.html"> FAQ's</a>
+            <a href="aboutus.html">  About us  </a>
+            <a href="contact us.html"> | Contact us  </a>
+            <a href="faq.html"> | FAQ's  </a>
             </ul>
 
   <footer  id="fw-footer" class="container " tabindex="-1" data-owner="ID">
       <ul>
-          <a href="//globalcontacts.cloudapps.cisco.com/contacts/selectsOptions/en_IN"> Contacts</a>
-          <a href="https://secure.opinionlab.com/ccc01/o.asp?id=jBjOhqOJ"> Feedback</a>
-          <a href="/c/en/us/about/help.html"> Help</a>
-          <a href="/c/en_in/about/sitemap.html"> Site Map</a>
-          <a href="//www.cisco.com/c/en/us/about/legal/terms-conditions.html">   Terms &amp; Conditions</a>
-
-
-              <a href="//www.cisco.com/c/en_in/about/legal/privacy-full.html"><span>Privacy Statement</span></a>
-
-              <a href="//www.cisco.com/c/en_in/about/legal/privacy-full.html#cookies"> <span>Cookies</span></a>
-          <a href="//www.cisco.com/c/en/us/about/legal/trademarks.html">Trademarks</a>
+         <a href="test1.html">  Feedback </a>
+          <a href="help.html"> | Help </a>
+          <a href="terms.html">  | Terms & Conditions  </a>
+              <a href="privacy.html"><span> | Privacy Statement  </span></a>
       </ul>
   </footer>
 </div>
-
 </body>
 </html>
