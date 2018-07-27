@@ -23,8 +23,135 @@ a.c{
     border-right: 1px solid black;
     height: 350px;
 }
+
+
+
+
+
 </style>
-<body>
+<script type="text/javascript">
+  $(document).ready(function(){
+    console.log("side navbar ");
+    $("#mySidebar").mouseleave(function(){
+      console.log("side navbar ");
+        $("#mySidebar").hide();
+
+    })
+
+  });
+</script>
+
+<style>
+
+</style>
+
+  <!-- <style>
+.mySlides {display:none;}
+</style> -->
+  <body id="body">
+
+    <div class="w3-sidebar w3-bar-block w3-border-right" style="display:none" id="mySidebar">
+  <button onclick="w3_close()" class="w3-bar-item w3-large">Close   &times;</button>
+  <a href="index.html"  class="w3-bar-item w3-button">Home</a>
+  <a href="#" <button  class="dropdown-btn" class="w3-bar-item w3-button w3-hover-grey"> Shop by category
+<i class="fa fa-caret-down"></i>
+</button></a>
+<div class="dropdown-container">
+<a href="fruits and vegetables.html" class="w3-bar-item w3-button w3-hover-grey">Fruits and Vegetables</a>
+<a href="bevarages.html" class="w3-bar-item w3-button w3-hover-grey">Beverages</a>
+<a href="dairyproducts.html" class="w3-bar-item w3-button w3-hover-grey" >Dairy</a>
+<a href="householdneeds.html" class="w3-bar-item w3-button w3-hover-grey">Household Products</a>
+<a href="personalcare.html" class="w3-bar-item w3-button w3-hover-grey">Personal Care</a>
+<a href="instantfoods.html" class="w3-bar-item w3-button w3-hover-grey">Instant Food</a>
+<a href="snackfood.html" class="w3-bar-item w3-button w3-hover-grey">Snacks</a>
+<a href="sweetsandchocolate.html" class="w3-bar-item w3-button w3-hover-grey">Sweets and Chocolates</a>
+<a href="babycare.html" class="w3-bar-item w3-button w3-hover-grey">Baby Care Products</a>
+
+</div>
+  <a href="offer11.html" class="w3-bar-item w3-button">Your order</a>
+  <a href="#" <button  class="dropdown-btn" class="w3-bar-item w3-button w3-hover-grey">My account
+      <i class="fa fa-caret-down"></i>
+      </button></a>
+      <div class="dropdown-container">
+      <a href="fruits and vegetables.html" class="w3-bar-item w3-button w3-hover-grey">My Profile</a>
+      <a href="bevarages.html" class="w3-bar-item w3-button w3-hover-grey">Notifications</a>
+      <a href="dairyproducts.html" class="w3-bar-item w3-button w3-hover-grey" >Refer & Earn</a>
+      <a href="householdneeds.html" class="w3-bar-item w3-button w3-hover-grey">Gift cards</a>
+      <a href="personalcare.html" class="w3-bar-item w3-button w3-hover-grey">Language</a>
+      <a href="index.html" class="w3-bar-item w3-button w3-hover-grey">Log Out</a>
+
+      </div>
+<a href="offer.html" class="w3-bar-item w3-button">Offers Zone </a>
+  <a href="#" class="w3-bar-item w3-button">Notifications</a>
+  <a href="#" class="w3-bar-item w3-button">Cook Book</a>
+  <a href="help.html" class="w3-bar-item w3-button">Help</a>
+  <a href="#" class="w3-bar-item w3-button">Sign Out</a>
+</div>
+<div id="sidenavbar">
+<nav class="navbar navbar-inverse" data-spy="affix" data-offset-top="197">
+  <ul class="nav navbar-nav">
+    <li>  <button class="w3-button w3-black w3-xlarge" onclick="w3_open()">☰</button></li>
+   <li><a style="color:white;font-size:25px" href="index.html">Home &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp</a></li>
+     </ul>
+<p style="color:white; font-size:30px" class="navbar-text">InstaCart</p>
+  <ul class="nav navbar-nav navbar-right">
+    <li><a style="color:white" href="front.html"><i class="fa fa-user"></i>Sign Up</a></li>
+    <li><a style="color:white" href="cart.html"><i class="fa fa-shopping-cart"></i>Cart</a></li>
+    <form class="navbar-form navbar-left" action="/action_page.php">
+    <div class="form-group">
+      <input type="text" class="form-control" placeholder="Search" name="search">
+    </div>
+    <button type="submit" class="btn btn-default">Submit</button>
+  </form>
+  </ul>
+</nav>
+</div>
+<script>
+
+      /* scroll top*/
+      // When the user scrolls down 20px from the top of the document, show the button
+      window.onscroll = function() {scrollFunction()};
+
+      function scrollFunction() {
+          if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+              document.getElementById("myBtn").style.display = "block";
+          } else {
+              document.getElementById("myBtn").style.display = "none";
+          }
+      }
+
+      // When the user clicks on the button, scroll to the top of the document
+      function topFunction() {
+          document.body.scrollTop = 0;
+          document.documentElement.scrollTop = 0;
+      }
+/* sidebar*/
+  function w3_open() {
+document.getElementById("mySidebar").style.display = "block";
+}
+function w3_close() {
+document.getElementById("mySidebar").style.display = "none";
+}
+/* dropdown */
+var dropdown = document.getElementsByClassName("dropdown-btn");
+var i;
+
+for (i = 0; i < dropdown.length; i++) {
+dropdown[i].addEventListener("click", function() {
+this.classList.toggle("active");
+var dropdownContent = this.nextElementSibling;
+if (dropdownContent.style.display === "block") {
+  dropdownContent.style.display = "none";
+} else {
+  dropdownContent.style.display = "block";
+}
+});
+}
+
+  </script>
+<!-- Page Content -->
+
+
   <div class="container">
         <center><h2><b>FRUITS AND VEGETABLES</b></h2></center>
         <br>

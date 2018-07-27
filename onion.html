@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css"/>
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
 
 <!-- end of librarie -->
 <style>
@@ -29,59 +29,126 @@ hr {
     border-style: inset;
     border-width: 1px;
 }
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.topnav {
+  position: relative;
+  overflow: hidden;
+  background-color: green;
+}
+
+.topnav a {
+  float: left;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: white;
+  color: black;
+}
+
+.topnav a.active {
+  background-color:none;
+  color: white;
+}
+
+.topnav-centered a {
+  float: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.topnav-right {
+  float: right;
+}
+
+/* Responsive navigation menu (for mobile devices) */
+@media screen and (max-width: 600px) {
+  .topnav a, .topnav-right {
+    float: none;
+    display: block;
+  }
+
+  .topnav-centered a {
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: none;
+  }
+}
 </style>
 </head>
 <body>
-<div class="container">
+  <div class="topnav">
+    <ul class="nav navbar-nav">
+      <a href="fruits and vegetables.html">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+          </a>
+          <div class="topnav-centered">
+          <a href="" class="active">ONION</a>
+        </div>
+      </div>
+
+<div class="container" data-ng-app="" data-ng-init="Price=24.75">
     <h1>FRESHO</h1>
-    <h2>Onion &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp Express Delivery : 60 minutes</h2>
-    <b style="font-size:20px">Quantity:</b>
-  <input type="number" id="myNumber" min="1" max="10" input type="number" placeholder="1 kg" name="Quantity">
+    <h2>ONION &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp Express Delivery : 60 minutes</h2>
+    <b style="font-size:20px">Quantity</b>
+  <input type="number" id="myNumber" min="1" max="10" input type="number" ng-model="Quantity" placeholder="1 kg" name="Quantity">
 <a href="#" class="btn btn-info" role="button" style="margin-left:20px"><b> ADD TO CART</b></a>
-    <h4><b>MRP :</b> <strike>Rs 33</strike> &nbsp<b style="font-size:25px"> Rs 24.75 </b> <a class="c"> 25% OFF</a></h4>
+    <h4><b>MRP :</b> <strike><i style="font-size:24px" class="fa">&#xf156;</i>33</strike> &nbsp<b style="font-size:25px"><i style="font-size:24px" class="fa">&#xf156;</i>24.75 </b> <a class="c"><b> 25% OFF</b></a></h4>
+<p><strong>Total in Rupees:</strong>{{Quantity * Price}}</p>
+<div class="w3-content w3-display-container">
+  <img class="mySlides" src="images/onion1.jpg" style="width:70%">
+     <img class="mySlides" src="images/onion2.jpeg" style="width:70%">
+     <img class="mySlides" src="images/onion3.jpeg" style="width:70%">
+     <img class="mySlides" src="images/onion4.jpeg" style="width:70%">
 
-    <div class="w3-content w3-display-container">
-      <img class="mySlides" src="images/onion1.jpg" style="width:100%">
-      <img class="mySlides" src="images/onion2.jpg" style="width:100%">
-      <img class="mySlides" src="images/onion3.jpg" style="width:100%">
+  <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+  <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+</div>
 
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
 
-      <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
-      <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
-    </div>
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
 
-    <script>
-    var slideIndex = 1;
-    showDivs(slideIndex);
-
-    function plusDivs(n) {
-      showDivs(slideIndex += n);
-    }
-
-    function showDivs(n) {
-      var i;
-      var x = document.getElementsByClassName("mySlides");
-      if (n > x.length) {slideIndex = 1}
-      if (n < 1) {slideIndex = x.length}
-      for (i = 0; i < x.length; i++) {
-         x[i].style.display = "none";
-      }
-      x[slideIndex-1].style.display = "block";
-    }
-    </script>
-    <h6 style="text-align:center">Vegetarian</h6>
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+  x[slideIndex-1].style.display = "block";
+}
+</script>
+<h6 style="text-align:center"><i class="fa fa-circle"  style="color:green; border:solid; font-size:15px"></i><b>Vegetarian</b></h6>
 <hr>
-<h2> InstaCart Variable Weight Policy </h2>
+<h2> <i class="fa fa-balance-scale"></i>  InstaCart Variable Weight Policy </h2>
 <h4><p> <i>Please note that fresh fruit and vegetables items will be billed based on exact
   weight during order processing.<br>(In case the actual weight exceeds the requested
   weight by more than 5%,you will be charged only for 5% excess weight.)</i></p></h4>
 <hr>
-<div class="container">
+<div class="w3-container">
 <div class="w3-panel w3-leftbar w3-light-grey">
-<h2><u> ABOUT</u> <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal" style="margin-left:900px"><b>Benefits</b></button> </h2>
-  <p class="w3-xlarge w3-serif">"The onion,also known as bulb onion ,common onion,is a vegetable that is the most widely used cultivated species.<br>
-      They are of different colors like white,red or yellow.<br>They have a strong flavour and a very distinctive
-      smell.<br>Onions are cultivated and used around the world."</p>
+<h2><u> ABOUT</u> <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal" style="margin-left:800px"><b>Benefits</b></button> </h2>
+  <p class="w3-xlarge w3-serif">ONION<br>
+    "The onion,also known as bulb onion ,common onion,is a vegetable that is the most widely used cultivated species.<br>
+          They are of different colors like white,red or yellow.<br>They have a strong flavour and a very distinctive
+          smell.<br>Onions are cultivated and used around the world."</p>
   </div>
 </div>
   </div>
@@ -95,10 +162,12 @@ hr {
           <h4 class="modal-title"><b>Interesting Fact</b></h4>
         </div>
         <div class="modal-body">
-          <p>Onions are very low in calories and fats.<br>They are rich in soluable dietary fibre
-        .<br>They are also good in anti-oxidant vitamin,Vitamin-C and mineral manganese.<br>
-      Onions are also good in the B-complex group of Vitamins.<br>They are all helpful in maintaining
-    good health and have anti-cancer and anti-microbial properties.</p>
+          <p>
+            Onions are very low in calories and fats.<br>They are rich in soluable dietary fibre
+                    .<br>They are also good in anti-oxidant vitamin,Vitamin-C and mineral manganese.<br>
+                  Onions are also good in the B-complex group of Vitamins.<br>They are all helpful in maintaining
+                good health and have anti-cancer and anti-microbial properties.</p>
+              </p>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>

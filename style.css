@@ -156,3 +156,72 @@ body {font-family: Arial, Helvetica, sans-serif;}
 .container1{
   background-color: black;
 }
+
+/*fixed nav*/
+
+.affix
+{
+
+     top: 0;
+
+     width: 100%;
+
+     z-index: 9999;
+
+ }
+
+/* dropdown */
+     .fa-caret-down {
+         float: right;
+         padding-right: 5px;
+     }
+     .dropdown-container {
+    display: none;
+    background-color: black;
+    padding-left: 8px;
+    color: white;
+}
+
+.dropdown-btn {
+    text-decoration: none;
+    font-size: 20px;
+    color: grey;
+    display: block;
+    border: none;
+    background: none;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    outline: none;
+}
+  .footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: black;
+   color: white;
+   text-align: center;
+}
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: red;
+    font-size: 150%;
+    opacity: 1; /* Firefox */
+}
+div.scrollmenu {
+    background-color:khaki;
+    overflow: auto;
+    white-space: nowrap;
+}
+
+div.scrollmenu a {
+    display:inline-grid;
+    color: white;
+    text-align: center;
+    padding: 50px;
+    text-decoration: none;
+}
+
+div.scrollmenu a:hover {
+    background-color:snow white;
+}
