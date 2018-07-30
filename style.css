@@ -281,3 +281,9 @@ body {
     transform: none;
   }
 }
+/*slideshow size*/
+.slideshow-container{
+  max-width: 500px;
+  position: relative;
+  margin: auto;
+}

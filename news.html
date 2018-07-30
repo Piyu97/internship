@@ -110,14 +110,14 @@ body {
   .timeline::after {
     left: 31px;
   }
-  
+
   /* Full-width containers */
   .container {
     width: 100%;
     padding-left: 70px;
     padding-right: 25px;
   }
-  
+
   /* Make sure that all arrows are pointing leftwards */
   .container::before {
     left: 60px;
@@ -130,7 +130,7 @@ body {
   .left::after, .right::after {
     left: 15px;
   }
-  
+
   /* Make all right containers behave like the left ones */
   .right {
     left: 0%;
@@ -139,7 +139,15 @@ body {
 </style>
 </head>
 <body>
-
+  <div class="topnav">
+    <ul class="nav navbar-nav">
+      <a href="index.html">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+          </a>
+          <div class="topnav-centered">
+          <a href="" class="active">NEWS</a>
+        </div>
+      </div>
 <div class="timeline">
   <div class="container left">
     <div class="content">
