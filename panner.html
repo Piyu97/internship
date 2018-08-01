@@ -14,22 +14,6 @@
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
 
 <!-- end of librarie -->
-<style>
-a.c{
-  color:red;
-  margin-left: 10px;
-  font-size: 20px;
-}
-hr {
-    display: block;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-    margin-left: auto;
-    margin-right: auto;
-    border-style: inset;
-    border-width: 1px;
-}
-</style>
 </head>
 <body>
   <div class="topnav">
@@ -42,12 +26,12 @@ hr {
         </div>
       </div>
 <div class="container" data-ng-app="" data-ng-init="Price=68">
-    <h1>AMUL PANNER</h1>
-    <h2>       &nbsp &nbsp &nbsp &nbsp   &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp Express Delivery : 60 minutes</h2>
+    <h1 style="font-size:35px">AMUL PANNER</h1>
+    <h2 style="font-size:35px">          &nbsp &nbsp &nbsp &nbsp &nbsp  &nbsp   &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp <i class="fa fa-motorcycle" style="font-size:48px;color:red"></i>  &nbsp  &nbsp  &nbsp 60minutes</h2>
     <b style="font-size:20px">Quantity</b>
   <input type="number" id="myNumber" min="1" max="10" input type="number" ng-model="Quantity" placeholder="250gm" name="Quantity">
 <a href="#" class="btn btn-info" role="button" style="margin-left:20px"><b> ADD TO CART</b></a>
-    <h4><b>MRP :</b> <strike><i style="font-size:24px" class="fa">&#xf156;</i>70</strike> &nbsp<b style="font-size:25px"><i style="font-size:24px" class="fa">&#xf156;</i>68 </b> <a class="c"> <b>2RSOFF</b></a></h4>
+    <h4><b>MRP</b> <strike><a class="c"><i style="font-size:24px" class="fa">&#xf156;</i>70</a></strike><b style="font-size:25px"><a class="d"><i style="font-size:24px" class="fa">&#xf156;</i>68</a> </b> <a class="c"> <b><i style="font-size:24px" class="fa">&#xf156;</i>2 OFF</b></a></h4>
 <p><strong>Total in Rupees:</strong>{{Quantity * Price}}</p>
 <div class="slideshow-container">
   <img class="mySlides" src="images/new.png" style="width:100%">

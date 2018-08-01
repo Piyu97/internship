@@ -13,24 +13,48 @@ app.config(function($routeProvider){
 
 
 });
-app.controller("myController",function($scope){
-  $scope.title="Helloooo";
+//signup refering register page
+//login or register refer to login page
+app.controller("myController",function($scope,$http){
+  $scope.register=function(){
+    let data={
+      text:$scope.uname,
+      email:$scope.email,
+      password:$scope.password
 
-  $scope.datas=[{
-      name:"Ramu",
-      exp:4,
-      price:20000
-  },{
-    name:"ARamu",
-    exp:14,
-    price:50000
-  },{
-    name:"BRamu",
-    exp:6,
-    price:220000
-  },{
-    name:"CRamu",
-    exp:12,
-    price:230000
-  }]
+
+    }
+  console.log(data);
+    $http.post("http://localhost:3000/givesignup",data).then(function(response){
+      console.log(response.data);
+
+    });
+
+
+
+  }
+
+
+
+});
+
+
+//eo cmyController
+
+app.controller("loginController",function($scope,$http){
+
+  $scope.loginMethod=function(){
+    var login={
+      email:$scope.useremail,
+      password:$scope.userpassword
+    }
+    console.log("inside login method");
+    $http.post("http://localhost:3000/login",login).then(function(response){
+        console.log(response.data);
+
+    });
+
+
+  }
+
 });

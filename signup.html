@@ -9,6 +9,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
 
     <script src="js/app.js"></script>
+
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -152,7 +153,7 @@ a {
 
 </style>
 </head>
-<body>
+<body ng-app="myApp" ng-controller="myController">
   <div class="topnav">
     <ul class="nav navbar-nav">
       <a href="index.html">
@@ -162,17 +163,20 @@ a {
           <a href="" class="active">Sign-up</a>
         </div>
       </div>
-<form action="/action_page.php" onsubmit="return checkform(this);">
+<form  onsubmit="return checkform(this);" method="post">
   <div class="container">
     <h1>Register</h1>
     <p>Please fill in this form to create an account.</p>
     <hr>
+    <label for="name"><b>NAME</b></label>
+    <input type="text" placeholder="username" name="name" ng-model="uname" required>
+
 
     <label for="email"><b>Email</b></label>
-    <input type="text" placeholder="Enter Email" name="email" required>
+    <input type="text" placeholder="Enter Email" name="email" ng-model="email" required>
 
     <label for="psw"><b>Password</b></label>
-    <input type="password" id="psw" placeholder="Enter Password"  name="psw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
+    <input type="password" id="psw" placeholder="Enter Password"  name="psw" ng-model="password"pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
 
     <label for="psw-repeat"><b>Re-Enter Password</b></label>
     <input type="password"  id="psw"placeholder="Repeat Password" name="psw-repeat" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
@@ -201,7 +205,7 @@ a {
     </div>
     <br><br>
     <!-- END CAPTCHA -->
-    <button type="submit" class="registerbtn">Register</button>
+    <input type="submit" class="registerbtn" ng-click="register()">Register</input>
 
   </div>
 
