@@ -3,7 +3,7 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="style.css">
-
+<meta charset="utf-8">
 <!-- librarie -->
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
 
@@ -184,9 +184,9 @@ input[type=submit]:hover {
         <div class="hide-md-lg">
           <p>Or sign in manually:</p>
         </div>
-<form action="post">
+<form action="post",>
         <input type="email" name="email" placeholder="Enter email" ng-model="useremail" required>
-        
+
         <input type="password" name="password" placeholder="Password" ng-model="userpassword" required>
       <input type="submit" id="Login" value="Login" ng-click="loginMethod()">
 </form>

@@ -15,12 +15,13 @@ app.config(function($routeProvider){
 });
 //signup refering register page
 //login or register refer to login page
-app.controller("myController",function($scope,$http){
+app.controller("signupController",function($scope,$http){
   $scope.register=function(){
     let data={
-      text:$scope.uname,
+      username:$scope.name,
       email:$scope.email,
-      password:$scope.password
+      password:$scope.password,
+      reenterpassword:$scope.reenterpassword
 
 
     }
@@ -58,3 +59,77 @@ app.controller("loginController",function($scope,$http){
   }
 
 });
+
+//Help
+app.controller("helpController",function($scope,$http){
+  $scope.helpMethod=function(){
+    let data={
+      firstname:$scope.firstname,
+      lastname:$scope.lastname,
+      problem:$scope.problem
+
+
+    }
+  console.log(data);
+    $http.post("http://localhost:3000/givehelp",data).then(function(response){
+      console.log(response.data);
+
+    });
+
+
+
+  }
+
+
+
+});
+//eof help
+//acc
+app.controller("accController",function($scope,$http){
+  $scope.accMethod=function(){
+    let data={
+      name:$scope.name,
+      email:$scope.email,
+      number:$scope.number
+
+
+    }
+  console.log(data);
+    $http.post("http://localhost:3000/giveacc",data).then(function(response){
+      console.log(response.data);
+
+    });
+
+
+
+  }
+
+
+
+});
+//eof acc
+//FEEDBACK
+app.controller("feedbackController",function($scope,$http){
+  $scope.FeedbackMethod=function(){
+    let data={
+      name:$scope.name,
+      desgination:$scope.desgination,
+      feedbacks:$scope.feedbacks
+
+
+    }
+  console.log(data);
+    $http.post("http://localhost:3000/givefeedback",data).then(function(response){
+      console.log(response.data);
+
+    });
+
+
+
+  }
+
+
+
+});
+
+//eof FEEDBACK

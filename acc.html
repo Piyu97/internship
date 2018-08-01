@@ -8,34 +8,25 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
-<body>
+<body  ng-app="myApp" ng-controller="accController" >
 <center><h4 style="color: black; font-size:180%">Account Details</h4></center>
 <div class="container">
-  <form>
+  <form method="post">
     <div class="form-group">
       <label for="usr">Name:</label>
-      <input type="text" class="form-control" id="usr">
+      <input type="text" class="form-control" id="usr" ng-model="name" required >
     </div>
-    <div class="form-group">
-      <label for="pwd">Password:</label>
-      <input type="password" class="form-control" id="pwd">
-    </div>
+
     <div class="form-group">
       <label for="email">Email id:</label>
-      <input type="email" class="form-control" id="Email">
+      <input type="email" class="form-control" id="Email" ng-model="email" required>
     </div>
     <div class="form-group">
       <label for="number">Number:</label>
-      <input type="text" class="form-control" id="Number">
+      <input type="text" class="form-control" id="Number" ng-model="number" required>
     </div>
-    <div class="form-group">
-      <label for="address">Address</label>
-      <input type="address" class="form-control" id="Address" input type="text" placeholder="enter ur apt name floor..." name="search"><br>
-        <input type="address" class="form-control" id="Address" input type="text" placeholder="strret area..." name="search"><br>
-          <input type="address" class="form-control" id="Address" input type="text" placeholder="state and pincode..." name="search">
 
-    </div>
-    <button type="button" class="btn btn-success">Submit</button>
+    <input type="submit" value="Submit" ng-click="accMethod()"></input>
   </form>
 </div>
 

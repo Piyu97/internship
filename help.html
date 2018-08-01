@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta charset="utf-8">
+
   <link rel="stylesheet" href="style.css">
 
   <!-- librarie -->
@@ -52,7 +54,7 @@ input[type=submit]:hover {
 </style>
 </head>
 
-<body>
+<body ng-app="myApp" ng-controller="helpController">
   <div class="topnav">
     <ul class="nav navbar-nav">
       <a href="index.html">
@@ -65,12 +67,12 @@ input[type=submit]:hover {
 <h3>Help Form</h3>
 
 <div class="container">
-  <form action="/action_page.php">
+  <form method="post">
     <label for="fname">First Name</label>
-    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+    <input type="text" id="fname" name="firstname" placeholder="Your name.." ng-model="firstname" required>
 
     <label for="lname">Last Name</label>
-    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+    <input type="text" id="lname" name="lastname" placeholder="Your last name.." ng-model="lastname" required>
 
     <label for="country">Country</label>
     <select id="country" name="country">
@@ -80,9 +82,9 @@ input[type=submit]:hover {
     </select>
 
     <label for="subject">Problem</label>
-    <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+    <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"ng-model="problem" required ></textarea>
 
-    <input type="submit" value="Submit">
+    <input type="submit" value="Submit" ng-click="helpMethod()"></input>
   </form>
 </div>
 
